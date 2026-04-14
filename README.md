@@ -21,59 +21,6 @@ PolyWordle is an open-source word-guessing game (à la Wordle) that works across
 
 ---
 
-## 🚀 How to put this on GitHub (step by step)
-
-### Step 1 — Create a GitHub account
-Go to [github.com](https://github.com) and sign up if you don't have an account.
-
-### Step 2 — Create a new repository
-1. Click the **+** button in the top right → **New repository**
-2. Name it `polywordle` (or anything you like)
-3. Set it to **Public**
-4. **Do NOT** check "Add a README" — you already have one
-5. Click **Create repository**
-
-### Step 3 — Upload the project files
-
-**Option A: Using the GitHub website (no coding needed)**
-1. On your new repo page, click **uploading an existing file**
-2. Drag and drop ALL the files and folders from the zip you downloaded
-3. Make sure you include: `src/`, `.github/`, `index.html`, `package.json`, `vite.config.js`, `README.md`, `CONTRIBUTING.md`, `LICENSE`, `.gitignore`
-4. Scroll down, write a commit message like "Initial commit"
-5. Click **Commit changes**
-
-**Option B: Using Git on your computer (recommended)**
-```bash
-# Unzip the downloaded file, then:
-cd polywordle
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/polywordle.git
-git push -u origin main
-```
-
-### Step 4 — Enable GitHub Pages (free hosting!)
-1. Go to your repo → **Settings** → **Pages** (left sidebar)
-2. Under **Source**, select **GitHub Actions**
-3. That's it! The deploy workflow in `.github/workflows/deploy.yml` will automatically build and publish your site every time you push to `main`
-
-### Step 5 — Set your base path
-Before pushing, edit `vite.config.js` and set the base path to your repo name:
-```js
-const base = process.env.VITE_BASE_PATH || '/polywordle/';
-//                                           ^^^^^^^^^^^^^ your repo name
-```
-(Skip this step if you use Vercel or Netlify instead — just leave it as `'/'`)
-
-### Step 6 — Your live URL
-After the GitHub Action runs (takes ~2 minutes), your game will be live at:
-```
-https://YOUR_USERNAME.github.io/polywordle/
-```
-
----
 
 ## 💻 Running locally
 
